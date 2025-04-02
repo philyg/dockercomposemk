@@ -1,0 +1,11 @@
+SVC := myService
+
+pre-up:
+	echo "Service now starting!"
+
+post-up:
+	echo "Service has started!"
+
+pre-shell:
+	echo "No, we want requests for shells to fail."
+	exit 1
