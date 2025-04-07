@@ -2,6 +2,19 @@
 
 https://github.com/philyg/dockercomposemk
 
+> [!TIP]
+> Download the latest generated Makefile directly:
+>
+> [Here](https://github.com/philyg/dockercomposemk/releases/download/latest/docker-compose.mk)
+>
+> or
+> 
+>     wget https://github.com/philyg/dockercomposemk/releases/download/latest/docker-compose.mk
+>
+> or
+>
+>     curl -O https://github.com/philyg/dockercomposemk/releases/download/latest/docker-compose.mk
+
 ## Motivation
 
 Many simpler deployments of containers utilize docker-compose to configure containers using config files rather than command line switches.
