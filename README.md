@@ -5,15 +5,15 @@ https://github.com/philyg/dockercomposemk
 > [!TIP]
 > Download the latest generated Makefile directly:
 >
-> [Here](https://github.com/philyg/dockercomposemk/releases/download/latest/docker-compose.mk)
->
-> or
-> 
->     wget https://github.com/philyg/dockercomposemk/releases/download/latest/docker-compose.mk
+> [Here](https://github.com/philyg/dockercomposemk/releases/latest/download/docker-compose.mk)
 >
 > or
 >
->     curl -O https://github.com/philyg/dockercomposemk/releases/download/latest/docker-compose.mk
+>     curl -LO https://github.com/philyg/dockercomposemk/releases/latest/download/docker-compose.mk
+>
+> or
+>
+>     curl -Lo Makefile https://github.com/philyg/dockercomposemk/releases/latest/download/docker-compose.mk
 
 ## Motivation
 
