@@ -1,5 +1,9 @@
 # DockerComposeMk - Easing Docker Compose Handling with Makefiles
 
+![Build Status](https://github.com/philyg/dockercomposemk/actions/workflows/makefile.yml/badge.svg)
+![License](https://img.shields.io/github/license/philyg/dockercomposemk)
+![Release](https://img.shields.io/github/v/release/philyg/dockercomposemk)
+
 https://github.com/philyg/dockercomposemk
 
 > [!TIP]
