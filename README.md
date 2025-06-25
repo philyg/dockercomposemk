@@ -65,8 +65,11 @@ Finally, for further configuration, create a `Makefile-custom` in the same direc
 The Makefile comes preconfigured with the following output for `make` and `make all`:
 
 ````
-This is a dockercomposemk v0.1.0 Makefile. For more information see:
+This is a dockercomposemk v0.1.1 Makefile. For more information see:
 https://github.com/philyg/dockercomposemk
+
+dockercomposemk is Copyright (c) 2025 Philipp Grassl
+and released under the MIT license.
 
 
 Available implemented targets:
@@ -104,8 +107,8 @@ backup:         (Prepare for) backup of service data
 All targets call pre-[NAME] and post-[NAME] targets for additional hooks in overriding
 Makefile-custom files. The actual actions can also be changed by overriding real-[NAME].
 
-Additionally, the following veriables can be defined in Makefile-custom:
-force
+Additionally, the following variables can be defined in Makefile-custom:
+
 SVC          The service to interact with when using the run and shell
              targets (uses first one in docker-compose.y*ml if undefined)
 ````

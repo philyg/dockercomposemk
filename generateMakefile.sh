@@ -3,8 +3,7 @@
 # SPDX-FileCopyrightText: 2025 Philipp Grassl <philyg@linandot.net>
 # SPDX-License-Identifier: MIT
 
-VERSION=0.1.0
-COMPOSEFLAGS="--progress plain"
+VERSION=0.1.1
 
 TAB=$'\t'
 LF=$'\n'
@@ -112,7 +111,7 @@ $CUSTHELP
 All targets call pre-[NAME] and post-[NAME] targets for additional hooks in overriding
 Makefile-custom files. The actual actions can also be changed by overriding real-[NAME].
 
-Additionally, the following veriables can be defined in Makefile-custom:
+Additionally, the following variables can be defined in Makefile-custom:
 
 SVC          The service to interact with when using the run and shell
              targets (uses first one in docker-compose.y*ml if undefined)
@@ -127,12 +126,16 @@ all:
 
 EOF
 
-echo '-include Makefile-custom'
-echo ''
-echo 'ifeq ($(SVC),)'
-echo 'SVCPAT := "^[ \t]*(services:)?$$"'
-echo 'SVC := $(shell cat docker-compose.y*ml | grep -Ev ${SVCPAT} | head -n 1 | cut -d ":" -f 1 | awk '"'"'{ print $1 }'"'"')'
-echo 'endif'
+cat <<'EOF'
+-include Makefile-custom
+
+ifeq ($(SVC),)
+SVCPAT := "^[ \t]*(services:)?$$"
+SVC := $(shell cat docker-compose.y*ml | grep -Ev ${SVCPAT} | head -n 1 | cut -d ":" -f 1 | awk '"'"'{ print $1 }'"'"')
+endif
+
+EOF
+
 
 cat <<EOF
 real-%: phony real-%-default
